@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jumpEFB — The EFB built for the ride to altitude</title>
+<meta name="description" content="jumpEFB plans the spot, flies the jump run, weighs every load, and always knows where the glide takes you. The standalone pilot EFB from DirtDive, on iOS and Android.">
+<link rel="icon" type="image/png" href="assets/icon-1024.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Nav -->
+<div class="nav-wrap">
+  <nav class="nav">
+    <div class="nav-brand">
+      <div class="logo-tile"><svg width="36" height="36" viewBox="0 0 44 44"><circle cx="22" cy="22" r="19.2" fill="#0B1018" stroke="#2A3547" stroke-width="2"></circle><g stroke="#E0A83E" stroke-width="2.4" stroke-linecap="round"><line x1="7" y1="22" x2="11.3" y2="22"></line><line x1="22" y1="7" x2="22" y2="11.3"></line><line x1="37" y1="22" x2="32.7" y2="22"></line></g><path d="M15.5 24.5a6.5 6.5 0 0 1 13 0" fill="none" stroke="#4B9FE1" stroke-width="2.5" stroke-linecap="round"></path><path d="M15.5 24.5l6.5 6.5 6.5-6.5M22 31v-6.5" fill="none" stroke="#7EC0F2" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+      <span class="nav-name">jumpEFB</span>
+    </div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#spot">Spot engine</a>
+      <a href="#faq">FAQ</a>
+      <a href="#get" class="btn-nav">Get the app</a>
+    </div>
+  </nav>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-copy">
+    <div class="kicker dim-kicker">BUILT BY JUMP PILOTS &middot; iOS + ANDROID</div>
+    <h1>The EFB built for the ride to altitude.</h1>
+    <p class="hero-sub">General-aviation EFBs stop being useful the moment the door opens. jumpEFB plans the spot, flies the jump run, weighs every load, and always knows where the glide takes you.</p>
+    <div class="hero-actions">
+      <a href="#get" class="btn-primary">Get the app</a>
+      <a href="#features" class="btn-secondary">See what it does</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-label">SPOT SOLVED IN</div><div class="stat-value">&lt;10 s</div></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><div class="stat-label">W&amp;B RE-CHECK</div><div class="stat-value">Per load</div></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><div class="stat-label">SPOT &middot; W&amp;B &middot; GLIDE</div><div class="stat-value">On-device</div></div>
+    </div>
+  </div>
+
+  <!-- Device mock: jump run -->
+  <div class="device-wrap">
+    <div class="device">
+      <div class="device-header"><span>JUMP RUN &middot; KE60</span><span class="gps">GPS &middot; 3D</span></div>
+      <div class="device-map">
+        <svg width="308" height="300" viewBox="0 0 308 300" class="map-svg">
+          <g stroke="#141C28" stroke-width="1"><line x1="0" y1="75" x2="308" y2="75"></line><line x1="0" y1="150" x2="308" y2="150"></line><line x1="0" y1="225" x2="308" y2="225"></line><line x1="77" y1="0" x2="77" y2="300"></line><line x1="154" y1="0" x2="154" y2="300"></line><line x1="231" y1="0" x2="231" y2="300"></line></g>
+          <path d="M-10 240 C 60 210, 90 260, 160 244 S 290 270, 320 236" fill="none" stroke="#16202C" stroke-width="1.4"></path>
+          <path d="M-10 262 C 70 236, 110 284, 190 262 S 300 288, 320 260" fill="none" stroke="#16202C" stroke-width="1.4"></path>
+          <path d="M236 18 C 260 44, 296 40, 316 22 L 316 -6 L 236 -6 Z" fill="#101B29"></path>
+          <circle cx="154" cy="168" r="70" fill="none" stroke="#2A3547" stroke-width="1.4" stroke-dasharray="4 5"></circle>
+          <circle cx="154" cy="168" r="34" fill="none" stroke="#2A3547" stroke-width="1" stroke-dasharray="3 4"></circle>
+          <text x="154" y="172" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" font-weight="600" fill="#3E4C61">DZ</text>
+          <path d="M60 266 L222 62" fill="none" stroke="#4B9FE1" stroke-width="3.5" stroke-linecap="round"></path>
+          <path d="M222 62 l-24 5 M222 62 l-5 24" fill="none" stroke="#4B9FE1" stroke-width="3.5" stroke-linecap="round"></path>
+          <g transform="rotate(45 161 139)"><path d="M161 132 l6 7 -6 7 -6 -7 z" fill="#E0A83E"></path></g>
+          <text x="174" y="136" font-family="IBM Plex Mono,monospace" font-size="9" font-weight="600" fill="#E0A83E">EXIT</text>
+          <g transform="rotate(100 40 46)"><path d="M40 34 l0 22 M40 56 l-5 -7 M40 56 l5 -7" fill="none" stroke="#E0A83E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></g>
+          <text x="56" y="50" font-family="IBM Plex Mono,monospace" font-size="9" font-weight="600" fill="#8B7538">280/34</text>
+          <g transform="rotate(38 117 195)"><path d="M117 184 L125 204 L117 199 L109 204 Z" fill="#3FA776"></path></g>
+          <circle cx="117" cy="195" r="16" fill="none" stroke="#3FA776" stroke-width="1.6" opacity=".35"></circle>
+        </svg>
+        <div class="map-chip chip-left">RUN 274&deg;M</div>
+        <div class="map-chip chip-right">GRP 2 / 6</div>
+        <div class="map-readouts">
+          <div><div class="readout-label">GREEN LIGHT IN</div><div class="readout-value green">0.4 NM</div></div>
+          <div class="readout-r"><div class="readout-label">XTK</div><div class="readout-value xtk">0.02 L</div></div>
+        </div>
+      </div>
+      <div class="device-tiles">
+        <div class="tile"><div class="tile-label">ALT</div><div class="tile-value">13,500</div></div>
+        <div class="tile"><div class="tile-label">GS</div><div class="tile-value">92</div></div>
+        <div class="tile"><div class="tile-label">HDG</div><div class="tile-value">274&deg;</div></div>
+      </div>
+    </div>
+    <div class="wb-card">
+      <div class="wb-header"><span class="wb-title">LOAD 14 &middot; W&amp;B</span><span class="wb-ok">IN ENVELOPE</span></div>
+      <div class="wb-row"><span>GROSS</span><span class="wb-val">8,412 LB</span></div>
+      <div class="wb-row"><span>CG</span><span class="wb-val">139.8 IN</span></div>
+      <div class="wb-row"><span>MARGIN</span><span class="wb-val ok">+112 LB</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- Fleet strip -->
+<div class="fleet-wrap">
+  <div class="fleet">
+    <span class="fleet-label">W&amp;B PROFILES SHIP FOR</span>
+    <span class="fleet-item">CESSNA 182 / 206</span>
+    <span class="fleet-item">KODIAK 100</span>
+    <span class="fleet-item">PAC 750XL</span>
+    <span class="fleet-item">CARAVAN 208</span>
+    <span class="fleet-item">TWIN OTTER</span>
+    <span class="fleet-item">KING AIR 90</span>
+  </div>
+</div>
+
+<!-- Features -->
+<section id="features" class="features">
+  <div class="kicker accent-kicker">EVERYTHING BETWEEN ENGINE START AND JUMPERS AWAY</div>
+  <h2 class="features-h2">One app for the whole load cycle.</h2>
+  <div class="feature-grid">
+    <div class="feature-cell">
+      <div class="feature-tag">SPOT</div>
+      <div class="feature-title">Spot calculator</div>
+      <div class="feature-body">Winds-aloft drift solution with exit throw and freefall drift, drawn on the sectional in seconds.</div>
+    </div>
+    <div class="feature-cell">
+      <div class="feature-tag">JUMP RUN</div>
+      <div class="feature-title">Jump run guidance</div>
+      <div class="feature-body">Fly the line with live crosstrack, groundspeed timing, and a green-light call you can trust.</div>
+    </div>
+    <div class="feature-cell">
+      <div class="feature-tag">LOADS</div>
+      <div class="feature-title">Manifest &amp; W&amp;B</div>
+      <div class="feature-body">Every load weighed against the envelope as jumpers shuffle &mdash; no clipboard arithmetic.</div>
+    </div>
+    <div class="feature-cell">
+      <div class="feature-tag">GLIDE</div>
+      <div class="feature-title">Engine-out glide</div>
+      <div class="feature-body">A continuously updated, wind-corrected glide ring from your current altitude. Always an out.</div>
+    </div>
+    <div class="feature-cell">
+      <div class="feature-tag">WX</div>
+      <div class="feature-title">Winds aloft &amp; pattern</div>
+      <div class="feature-body">Forecast winds by altitude, pattern planning, and density altitude where it matters.</div>
+    </div>
+    <div class="feature-cell">
+      <div class="feature-tag">LOG</div>
+      <div class="feature-title">Pilot logbook</div>
+      <div class="feature-body">Loads, cycles, and hours logged automatically as you fly. Export whenever you need it.</div>
+    </div>
+  </div>
+</section>
+
+<!-- Spot deep dive -->
+<section id="spot" class="spot">
+  <div class="winds-panel">
+    <div class="winds-header"><span class="winds-title">WINDS ALOFT &middot; SOLVED SPOT</span><span class="winds-meta">KE60 &middot; 14:20Z</span></div>
+    <div class="winds-rows">
+      <div class="winds-row">
+        <span class="w-alt">12,000</span>
+        <span class="w-arrow" style="transform:rotate(100deg)">&#8593;</span>
+        <div class="w-bar"><div class="w-fill" style="width:78%"></div></div>
+        <span class="w-wind">280&deg; / 34 kt</span>
+      </div>
+      <div class="winds-row">
+        <span class="w-alt">9,000</span>
+        <span class="w-arrow" style="transform:rotate(95deg)">&#8593;</span>
+        <div class="w-bar"><div class="w-fill" style="width:64%"></div></div>
+        <span class="w-wind">275&deg; / 27 kt</span>
+      </div>
+      <div class="winds-row">
+        <span class="w-alt">6,000</span>
+        <span class="w-arrow" style="transform:rotate(90deg)">&#8593;</span>
+        <div class="w-bar"><div class="w-fill" style="width:48%"></div></div>
+        <span class="w-wind">270&deg; / 19 kt</span>
+      </div>
+      <div class="winds-row">
+        <span class="w-alt">3,000</span>
+        <span class="w-arrow" style="transform:rotate(85deg)">&#8593;</span>
+        <div class="w-bar"><div class="w-fill" style="width:30%"></div></div>
+        <span class="w-wind">265&deg; / 12 kt</span>
+      </div>
+      <div class="winds-row">
+        <span class="w-alt">SFC</span>
+        <span class="w-arrow" style="transform:rotate(80deg)">&#8593;</span>
+        <div class="w-bar"><div class="w-fill" style="width:16%"></div></div>
+        <span class="w-wind">260&deg; / 7 kt</span>
+      </div>
+    </div>
+    <div class="winds-footer">
+      <span class="winds-note">Freefall + canopy drift, throw, forward toss</span>
+      <span class="winds-spot">SPOT 0.3 W</span>
+    </div>
+  </div>
+  <div class="spot-copy">
+    <div class="kicker accent-kicker">THE SPOT ENGINE</div>
+    <h2>Winds change. The spot keeps up.</h2>
+    <p>Pull current winds aloft, and jumpEFB integrates drift through freefall and canopy descent &mdash; exit throw and jump-run offset included. The answer is a line on the map, not a math exercise at 13,500 feet.</p>
+    <ul class="checklist">
+      <li><span class="check">&#10003;</span>Live green-light call with crosstrack on the run-in</li>
+      <li><span class="check">&#10003;</span>Separate solutions per group: belly, freefly, tandems, students</li>
+      <li><span class="check">&#10003;</span>Engine-out glide ring drawn continuously, wind-corrected</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="faq-wrap">
+  <div class="faq">
+    <h2>Questions pilots ask.</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">Is this a replacement for ForeFlight?</div>
+        <div class="faq-a">No &mdash; it's the app for the jump operation itself. Many pilots run both: a GA EFB for the cross-country legs, jumpEFB for the load cycle. What GA EFBs treat as an edge case is our whole product. And unlike the big GA EFBs, we ship on Android too.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does it work without cell coverage?</div>
+        <div class="faq-a">Yes. Winds and forecasts are fetched when you have signal and cached; spot, jump run, W&amp;B, glide, and logbook are fully on-device.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What aircraft does it support?</div>
+        <div class="faq-a">Any jump ship. W&amp;B profiles ship for the common fleet &mdash; 182, 206, Caravan, Kodiak, PAC 750, Twin Otter, King Air &mdash; and you can build custom profiles.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is the green-light call authoritative?</div>
+        <div class="faq-a">It's advisory. You're the PIC &mdash; jumpEFB gives you the numbers to make the call, and the audit trail to defend it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="get" class="cta">
+  <div class="cta-icon"><svg width="56" height="56" viewBox="0 0 44 44"><circle cx="22" cy="22" r="19.2" fill="#0B1018" stroke="#2A3547" stroke-width="1.4"></circle><g stroke="#5E6B7F" stroke-width="1.1" stroke-linecap="round"><line x1="34.99" y1="14.5" x2="32.82" y2="15.75"></line><line x1="29.5" y1="9.01" x2="28.25" y2="11.18"></line><line x1="14.5" y1="9.01" x2="15.75" y2="11.18"></line><line x1="9.01" y1="14.5" x2="11.18" y2="15.75"></line></g><g stroke="#E0A83E" stroke-width="1.6" stroke-linecap="round"><line x1="7" y1="22" x2="10.8" y2="22"></line><line x1="22" y1="7" x2="22" y2="10.8"></line><line x1="37" y1="22" x2="33.2" y2="22"></line></g><path d="M15.5 24.5a6.5 6.5 0 0 1 13 0" fill="none" stroke="#4B9FE1" stroke-width="1.9" stroke-linecap="round"></path><path d="M15.5 24.5l6.5 6.5 6.5-6.5M22 31v-6.5" fill="none" stroke="#7EC0F2" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+  <h2>Fly the load, not the math.</h2>
+  <p>Free for every pilot, forever, on iOS <em>and</em> Android. Pro adds DZ connectivity when your dropzone runs on jumpDZM.</p>
+  <div class="cta-actions">
+    <!-- TODO(Trevor): swap for TestFlight / Play internal-track URLs -->
+    <a href="#get" class="btn-primary">Join the beta</a>
+    <!-- TODO(Trevor): confirm hello@dirtdive.app -->
+    <a href="mailto:hello@dirtdive.app" class="btn-secondary">Talk to us</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-legal">
+      <span class="footer-copyright">&copy; 2026 DirtDive &middot; jumpEFB</span>
+      <span class="footer-disclaimer">Advisory only &mdash; not for navigation. Not a substitute for pilot judgment or the POH.</span>
+    </div>
+    <div class="footer-links">
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <a href="#get">Beta</a>
+      <!-- TODO(Trevor): host the Privacy + Support pages from the launch package -->
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

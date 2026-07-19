@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+html{background:#0B0D11;scroll-behavior:smooth}body{margin:0;background:#0B0D11;font-family:'IBM Plex Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#4B9FE1;text-decoration:none}a:hover{color:#7EC0F2}
+</style></helmet>
+
+<div style="min-height:100vh;background:#0B0D11;color:#E7ECF3">
+
+<!-- Nav -->
+<div style="position:sticky;top:0;z-index:10;background:rgba(11,13,17,.82);backdrop-filter:blur(14px);border-bottom:1px solid #151A22">
+<nav style="max-width:1120px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:space-between">
+  <div style="display:flex;align-items:center;gap:11px">
+    <div style="width:44px;height:44px;border-radius:11px;background:#0E1116;border:1px solid #1B212B;display:grid;place-items:center"><svg width="36" height="36" viewBox="0 0 44 44"><circle cx="22" cy="22" r="19.2" fill="#0B1018" stroke="#2A3547" stroke-width="2"></circle><g stroke="#E0A83E" stroke-width="2.4" stroke-linecap="round"><line x1="7" y1="22" x2="11.3" y2="22"></line><line x1="22" y1="7" x2="22" y2="11.3"></line><line x1="37" y1="22" x2="32.7" y2="22"></line></g><path d="M15.5 24.5a6.5 6.5 0 0 1 13 0" fill="none" stroke="#4B9FE1" stroke-width="2.5" stroke-linecap="round"></path><path d="M15.5 24.5l6.5 6.5 6.5-6.5M22 31v-6.5" fill="none" stroke="#7EC0F2" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+    <span style="font:700 17px 'IBM Plex Sans';letter-spacing:-.02em">jumpEFB</span>
+  </div>
+  <div style="display:flex;align-items:center;gap:26px">
+    <a href="#features" style="font:500 13px 'IBM Plex Sans';color:#97A3B6" style-hover="color:#E7ECF3">Features</a>
+    <a href="#spot" style="font:500 13px 'IBM Plex Sans';color:#97A3B6" style-hover="color:#E7ECF3">Spot engine</a>
+    <a href="#faq" style="font:500 13px 'IBM Plex Sans';color:#97A3B6" style-hover="color:#E7ECF3">FAQ</a>
+    <a href="#get" style="font:600 13px 'IBM Plex Sans';color:#0B0D11;background:#4B9FE1;padding:9px 18px;border-radius:8px" style-hover="background:#7EC0F2;color:#0B0D11">Get the app</a>
+  </div>
+</nav>
+</div>
+
+<!-- Hero -->
+<header style="max-width:1120px;margin:0 auto;padding:76px 32px 88px;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center">
+  <div>
+    <div style="font:600 11px 'IBM Plex Mono',monospace;color:#5E6B7F;letter-spacing:.16em;margin-bottom:20px">BUILT BY JUMP PILOTS &middot; iOS + ANDROID</div>
+    <h1 style="margin:0;font:700 52px/1.08 'IBM Plex Sans';letter-spacing:-.03em;text-wrap:balance">The EFB built for the ride to altitude.</h1>
+    <p style="margin:20px 0 0;font:400 17px/1.6 'IBM Plex Sans';color:#97A3B6;max-width:480px;text-wrap:pretty">General-aviation EFBs stop being useful the moment the door opens. jumpEFB plans the spot, flies the jump run, weighs every load, and always knows where the glide takes you.</p>
+    <div style="display:flex;gap:14px;margin-top:32px">
+      <a href="#get" style="font:600 15px 'IBM Plex Sans';color:#0B0D11;background:#4B9FE1;padding:14px 26px;border-radius:9px" style-hover="background:#7EC0F2;color:#0B0D11">Get the app</a>
+      <a href="#features" style="font:600 15px 'IBM Plex Sans';color:#E7ECF3;border:1px solid #2A3547;padding:14px 26px;border-radius:9px" style-hover="border-color:#4B9FE1;color:#E7ECF3">See what it does</a>
+    </div>
+    <div style="display:flex;gap:32px;margin-top:44px">
+      <div><div style="font:600 9.5px 'IBM Plex Mono',monospace;color:#5E6B7F;letter-spacing:.12em">SPOT SOLVED IN</div><div style="font:700 20px 'IBM Plex Mono',monospace;color:#E7ECF3;margin-top:5px">&lt;10 s</div></div>
+      <div style="width:1px;background:#1B212B"></div>
+      <div><div style="font:600 9.5px 'IBM Plex Mono',monospace;color:#5E6B7F;letter-spacing:.12em">W&amp;B RE-CHECK</div><div style="font:700 20px 'IBM Plex Mono',monospace;color:#E7ECF3;margin-top:5px;white-space:nowrap">Per load</div></div>
+      <div style="width:1px;background:#1B212B"></div>
+      <div><div style="font:600 9.5px 'IBM Plex Mono',monospace;color:#5E6B7F;letter-spacing:.12em">SPOT &middot; W&amp;B &middot; GLIDE</div><div style="font:700 20px 'IBM Plex Mono',monospace;color:#E7ECF3;margin-top:5px;white-space:nowrap">On-device</div></div>
+    </div>
+  </div>
+  <!-- Device mock: jump run -->
+  <div style="justify-self:center;position:relative">
+    <div style="width:340px;border-radius:32px;background:#0B1018;border:2px solid #223042;padding:14px 14px 20px;box-shadow:0 30px 80px rgba(0,0,0,.6)">
+      <div style="display:flex;justify-content:space-between;align-items:center;padding:6px 10px 12px;font:600 11px 'IBM Plex Mono',monospace;color:#5E6B7F"><span>JUMP RUN &middot; KE60</span><span style="color:#3FA776">GPS &middot; 3D</span></div>
+      <div style="height:300px;border-radius:14px;background:#0F1521;position:relative;overflow:hidden">
+        <svg width="308" height="300" viewBox="0 0 308 300" style="position:absolute;inset:0">
+          <g stroke="#141C28" stroke-width="1"><line x1="0" y1="75" x2="308" y2="75"></line><line x1="0" y1="150" x2="308" y2="150"></line><line x1="0" y1="225" x2="308" y2="225"></line><line x1="77" y1="0" x2="77" y2="300"></line><line x1="154" y1="0" x2="154" y2="300"></line><line x1="231" y1="0" x2="231" y2="300"></line></g>
+          <path d="M-10 240 C 60 210, 90 260, 160 244 S 290 270, 320 236" fill="none" stroke="#16202C" stroke-width="1.4"></path>
+          <path d="M-10 262 C 70 236, 110 284, 190 262 S 300 288, 320 260" fill="none" stroke="#16202C" stroke-width="1.4"></path>
+          <path d="M236 18 C 260 44, 296 40, 316 22 L 316 -6 L 236 -6 Z" fill="#101B29"></path>
+          <circle cx="154" cy="168" r="70" fill="none" stroke="#2A3547" stroke-width="1.4" stroke-dasharray="4 5"></circle>
+          <circle cx="154" cy="168" r="34" fill="none" stroke="#2A3547" stroke-width="1" stroke-dasharray="3 4"></circle>
+          <text x="154" y="172" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" font-weight="600" fill="#3E4C61">DZ</text>
+          <path d="M60 266 L222 62" fill="none" stroke="#4B9FE1" stroke-width="3.5" stroke-linecap="round"></path>
+          <path d="M222 62 l-24 5 M222 62 l-5 24" fill="none" stroke="#4B9FE1" stroke-width="3.5" stroke-linecap="round"></path>
+          <g transform="rotate(45 161 139)"><path d="M161 132 l6 7 -6 7 -6 -7 z" fill="#E0A83E"></path></g>
+          <text x="174" y="136" font-family="IBM Plex Mono,monospace" font-size="9" font-weight="600" fill="#E0A83E">EXIT</text>
+          <g transform="rotate(100 40 46)"><path d="M40 34 l0 22 M40 56 l-5 -7 M40 56 l5 -7" fill="none" stroke="#E0A83E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></g>
+          <text x="56" y="50" font-family="IBM Plex Mono,monospace" font-size="9" font-weight="600" fill="#8B7538">280/34</text>
+          <g transform="rotate(38 117 195)"><path d="M117 184 L125 204 L117 199 L109 204 Z" fill="#3FA776"></path></g>
+          <circle cx="117" cy="195" r="16" fill="none" stroke="#3FA776" stroke-width="1.6" opacity=".35"></circle>
+        </svg>
+        <div style="position:absolute;top:10px;left:10px;background:rgba(11,16,24,.85);border:1px solid #1B2634;border-radius:6px;padding:4px 8px;font:600 9.5px 'IBM Plex Mono',monospace;color:#97A3B6">RUN 274&deg;M</div>
+        <div style="position:absolute;top:10px;right:10px;background:rgba(11,16,24,.85);border:1px solid #1B2634;border-radius:6px;padding:4px 8px;font:600 9.5px 'IBM Plex Mono',monospace;color:#97A3B6">GRP 2 / 6</div>
+        <div style="position:absolute;left:12px;bottom:12px;right:12px;display:flex;justify-content:space-between;align-items:flex-end">
+          <div><div style="font:600 9px 'IBM Plex Mono',monospace;color:#5E6B7F;letter-spacing:.1em">GREEN LIGHT IN</div><div style="font:700 26px 'IBM Plex Mono',monospace;color:#3FA776">0.4 NM</div></div>
+          <div style="text-align:right"><div style="font:600 9px 'IBM Plex Mono',monospace;color:#5E6B7F;letter-spacing:.1em">XTK</div><div style="font:700 18px 'IBM Plex Mono',monospace;color:#E7ECF3">0.02 L</div></div>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:12px">
+        <div style="background:#0F1521;border-radius:9px;padding:10px 12px"><div style="font:600 8.5px 'IBM Plex Mono',monospace;color:#5E6B7F">ALT</div><div style="font:700 16px 'IBM Plex Mono',monospace;color:#E7ECF3">13,500</div></div>
+        <div style="background:#0F1521;border-radius:9px;padding:10px 12px"><div style="font:600 8.5px 'IBM Plex Mono',monospace;color:#5E6B7F">GS</div><div style="font:700 16px 'IBM Plex Mono',monospace;color:#E7ECF3">92</div></div>
+        <div style="background:#0F1521;border-radius:9px;padding:10px 12px"><div style="font:600 8.5px 'IBM Plex Mono',monospace;color:#5E6B7F">HDG</div><div style="font:700 16px 'IBM Plex Mono',monospace;color:#E7ECF3">274&deg;</div></div>
+      </div>
+    </div>
+    <sc-if value="{{ showLoadCard }}" hint-placeholder-val="{{ true }}">
+      <div style="position:absolute;left:-72px;bottom:132px;width:196px;background:#0E1116;border:1px solid #1B212B;border-radius:12px;padding:14px 16px;box-shadow:0 18px 50px rgba(0,0,0,.55)">
+        <div style="display:flex;justify-content:space-between;align-items:center"><span style="font:600 9.5px 'IBM Plex Mono',monospace;color:#5E6B7F;letter-spacing:.1em">LOAD 14 &middot; W&amp;B</span><span style="font:700 9.5px 'IBM Plex Mono',monospace;color:#3FA776">IN ENVELOPE</span></div>
+        <div style="display:flex;justify-content:space-between;margin-top:10px;font:600 12px 'IBM Plex Mono',monospace"><span style="color:#97A3B6">GROSS</span><span style="color:#E7ECF3">8,412 LB</span></div>
+        <div style="display:flex;justify-content:space-between;margin-top:6px;font:600 12px 'IBM Plex Mono',monospace"><span style="color:#97A3B6">CG</span><span style="color:#E7ECF3">139.8 IN</span></div>
+        <div style="display:flex;justify-content:space-between;margin-top:6px;font:600 12px 'IBM Plex Mono',monospace"><span style="color:#97A3B6">MARGIN</span><span style="color:#3FA776">+112 LB</span></div>
+      </div>
+    </sc-if>
+  </div>
+</header>
+
+<!-- Fleet strip -->
+<div style="border-top:1px solid #151A22;border-bottom:1px solid #151A22;background:#0E1116">
+  <div style="max-width:1120px;margin:0 auto;padding:16px 32px;display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap">
+    <span style="font:600 10px 'IBM Plex Mono',monospace;color:#4B9FE1;letter-spacing:.14em;margin-right:10px">W&amp;B PROFILES SHIP FOR</span>
+    <sc-for list="{{ strip }}" as="s" hint-placeholder-count="6">
+      <span style="font:500 11px 'IBM Plex Mono',monospace;color:#5E6B7F;letter-spacing:.1em">{{ s }}</span>
+    </sc-for>
+  </div>
+</div>
+
+<!-- Features -->
+<section id="features" style="max-width:1120px;margin:0 auto;padding:88px 32px 48px">
+  <div style="font:600 11px 'IBM Plex Mono',monospace;color:#4B9FE1;letter-spacing:.14em">EVERYTHING BETWEEN ENGINE START AND JUMPERS AWAY</div>
+  <h2 style="margin:12px 0 0;font:700 34px/1.15 'IBM Plex Sans';letter-spacing:-.025em;max-width:560px;text-wrap:balance">One app for the whole load cycle.</h2>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#1B212B;border:1px solid #1B212B;border-radius:12px;overflow:hidden;margin-top:44px">
+    <sc-for list="{{ features }}" as="f" hint-placeholder-count="6">
+      <div style="background:#0B0D11;padding:26px 26px 28px" style-hover="background:#0E1116">
+        <div style="font:600 10px 'IBM Plex Mono',monospace;color:#E0A83E;letter-spacing:.12em">{{ f.tag }}</div>
+        <div style="font:600 17px 'IBM Plex Sans';margin-top:12px;letter-spacing:-.01em">{{ f.title }}</div>
+        <div style="font:400 13.5px/1.6 'IBM Plex Sans';color:#97A3B6;margin-top:8px;text-wrap:pretty">{{ f.body }}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- Spot deep dive -->
+<section id="spot" style="max-width:1120px;margin:0 auto;padding:64px 32px 96px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+  <div style="border-radius:14px;background:#0E1116;border:1px solid #1B212B;padding:26px">
+    <div style="display:flex;justify-content:space-between;align-items:center"><span style="font:600 10px 'IBM Plex Mono',monospace;color:#5E6B7F;letter-spacing:.12em">WINDS ALOFT &middot; SOLVED SPOT</span><span style="font:600 10px 'IBM Plex Mono',monospace;color:#3E4C61">KE60 &middot; 14:20Z</span></div>
+    <div style="margin-top:18px;display:flex;flex-direction:column;gap:9px">
+      <sc-for list="{{ winds }}" as="w" hint-placeholder-count="5">
+        <div style="display:grid;grid-template-columns:52px 16px 1fr 96px;gap:12px;align-items:center">
+          <span style="font:600 12px 'IBM Plex Mono',monospace;color:#5E6B7F">{{ w.alt }}</span>
+          <span style="font:400 13px 'IBM Plex Mono',monospace;color:#4B9FE1;display:inline-block;transform:rotate({{ w.rot }});text-align:center">&#8593;</span>
+          <div style="height:8px;border-radius:4px;background:#0F1521;position:relative"><div style="position:absolute;left:0;top:0;bottom:0;border-radius:4px;background:#2E7BC4;width:{{ w.pct }}"></div></div>
+          <span style="font:600 12px 'IBM Plex Mono',monospace;color:#E7ECF3;text-align:right">{{ w.wind }}</span>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top:22px;padding-top:18px;border-top:1px solid #1B212B;display:flex;justify-content:space-between;align-items:center">
+      <span style="font:400 12.5px 'IBM Plex Sans';color:#97A3B6">Freefall + canopy drift, throw, forward toss</span>
+      <span style="font:700 15px 'IBM Plex Mono',monospace;color:#3FA776">SPOT 0.3 W</span>
+    </div>
+  </div>
+  <div>
+    <div style="font:600 11px 'IBM Plex Mono',monospace;color:#4B9FE1;letter-spacing:.14em">THE SPOT ENGINE</div>
+    <h2 style="margin:12px 0 0;font:700 34px/1.15 'IBM Plex Sans';letter-spacing:-.025em;text-wrap:balance">Winds change. The spot keeps up.</h2>
+    <p style="margin:16px 0 0;font:400 15.5px/1.65 'IBM Plex Sans';color:#97A3B6;text-wrap:pretty">Pull current winds aloft, and jumpEFB integrates drift through freefall and canopy descent — exit throw and jump-run offset included. The answer is a line on the map, not a math exercise at 13,500 feet.</p>
+    <ul style="margin:22px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px">
+      <li style="display:flex;gap:10px;font:400 14px 'IBM Plex Sans';color:#E7ECF3"><span style="color:#3FA776;font-weight:700">&#10003;</span>Live green-light call with crosstrack on the run-in</li>
+      <li style="display:flex;gap:10px;font:400 14px 'IBM Plex Sans';color:#E7ECF3"><span style="color:#3FA776;font-weight:700">&#10003;</span>Separate solutions per group: belly, freefly, tandems, students</li>
+      <li style="display:flex;gap:10px;font:400 14px 'IBM Plex Sans';color:#E7ECF3"><span style="color:#3FA776;font-weight:700">&#10003;</span>Engine-out glide ring drawn continuously, wind-corrected</li>
+    </ul>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" style="border-top:1px solid #151A22;background:#0E1116">
+  <div style="max-width:760px;margin:0 auto;padding:80px 32px">
+    <h2 style="margin:0;font:700 28px 'IBM Plex Sans';letter-spacing:-.02em">Questions pilots ask.</h2>
+    <div style="margin-top:30px;display:flex;flex-direction:column">
+      <sc-for list="{{ faqs }}" as="q" hint-placeholder-count="4">
+        <div style="padding:20px 0;border-bottom:1px solid #1B212B">
+          <div style="font:600 15px 'IBM Plex Sans';letter-spacing:-.01em">{{ q.q }}</div>
+          <div style="font:400 14px/1.65 'IBM Plex Sans';color:#97A3B6;margin-top:8px;text-wrap:pretty">{{ q.a }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="get" style="max-width:1120px;margin:0 auto;padding:96px 32px;text-align:center">
+  <div style="display:inline-grid;place-items:center;width:72px;height:72px;border-radius:18px;background:#0E1116;border:1px solid #1B212B;margin-bottom:24px"><svg width="56" height="56" viewBox="0 0 44 44"><circle cx="22" cy="22" r="19.2" fill="#0B1018" stroke="#2A3547" stroke-width="1.4"></circle><g stroke="#5E6B7F" stroke-width="1.1" stroke-linecap="round"><line x1="34.99" y1="14.5" x2="32.82" y2="15.75"></line><line x1="29.5" y1="9.01" x2="28.25" y2="11.18"></line><line x1="14.5" y1="9.01" x2="15.75" y2="11.18"></line><line x1="9.01" y1="14.5" x2="11.18" y2="15.75"></line></g><g stroke="#E0A83E" stroke-width="1.6" stroke-linecap="round"><line x1="7" y1="22" x2="10.8" y2="22"></line><line x1="22" y1="7" x2="22" y2="10.8"></line><line x1="37" y1="22" x2="33.2" y2="22"></line></g><path d="M15.5 24.5a6.5 6.5 0 0 1 13 0" fill="none" stroke="#4B9FE1" stroke-width="1.9" stroke-linecap="round"></path><path d="M15.5 24.5l6.5 6.5 6.5-6.5M22 31v-6.5" fill="none" stroke="#7EC0F2" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"></path></svg></div>
+  <h2 style="margin:0;font:700 38px/1.1 'IBM Plex Sans';letter-spacing:-.03em;text-wrap:balance">Fly the load, not the math.</h2>
+  <p style="margin:14px auto 0;font:400 15.5px/1.6 'IBM Plex Sans';color:#97A3B6;max-width:440px">Free for every pilot, forever, on iOS <em>and</em> Android. Pro adds DZ connectivity when your dropzone runs on jumpDZM.</p>
+  <div style="display:flex;gap:14px;justify-content:center;margin-top:30px">
+    <a href="#get" style="font:600 15px 'IBM Plex Sans';color:#0B0D11;background:#4B9FE1;padding:14px 28px;border-radius:9px" style-hover="background:#7EC0F2;color:#0B0D11">Join the beta</a>
+    <a href="#get" style="font:600 15px 'IBM Plex Sans';color:#E7ECF3;border:1px solid #2A3547;padding:14px 28px;border-radius:9px" style-hover="border-color:#4B9FE1;color:#E7ECF3">Talk to us</a>
+  </div>
+</section>
+
+<footer style="border-top:1px solid #151A22">
+  <div style="max-width:1120px;margin:0 auto;padding:26px 32px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:12px">
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <span style="font:400 12px 'IBM Plex Sans';color:#5E6B7F">&copy; 2026 DirtDive &middot; jumpEFB</span>
+      <span style="font:400 11.5px 'IBM Plex Sans';color:#3E4C61">Advisory only &mdash; not for navigation. Not a substitute for pilot judgment or the POH.</span>
+    </div>
+    <div style="display:flex;gap:22px">
+      <a href="#features" style="font:500 12px 'IBM Plex Sans';color:#5E6B7F" style-hover="color:#E7ECF3">Features</a>
+      <a href="#faq" style="font:500 12px 'IBM Plex Sans';color:#5E6B7F" style-hover="color:#E7ECF3">FAQ</a>
+      <a href="#get" style="font:500 12px 'IBM Plex Sans';color:#5E6B7F" style-hover="color:#E7ECF3">Beta</a>
+    </div>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;showLoadCard&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Hero&quot;},
+  &quot;windUnits&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;kt&quot;, &quot;mph&quot;], &quot;default&quot;: &quot;kt&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Spot panel&quot;}
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const units = this.props.windUnits ?? "kt";
+    const base = [
+      {alt: "12,000", pct: 78, dir: 280, kt: 34},
+      {alt: "9,000", pct: 64, dir: 275, kt: 27},
+      {alt: "6,000", pct: 48, dir: 270, kt: 19},
+      {alt: "3,000", pct: 30, dir: 265, kt: 12},
+      {alt: "SFC", pct: 16, dir: 260, kt: 7}
+    ];
+    const winds = base.map(w => ({
+      alt: w.alt,
+      pct: w.pct + "%",
+      rot: ((w.dir + 180) % 360) + "deg",
+      wind: String(w.dir).padStart(3, "0") + "\u00B0 / " + (units === "mph" ? Math.round(w.kt * 1.15078) : w.kt) + " " + units
+    }));
+    return {
+      showLoadCard: this.props.showLoadCard ?? true,
+      winds,
+      strip: ["CESSNA 182 / 206", "KODIAK 100", "PAC 750XL", "CARAVAN 208", "TWIN OTTER", "KING AIR 90"],
+      features: [
+        {tag: "SPOT", title: "Spot calculator", body: "Winds-aloft drift solution with exit throw and freefall drift, drawn on the sectional in seconds."},
+        {tag: "JUMP RUN", title: "Jump run guidance", body: "Fly the line with live crosstrack, groundspeed timing, and a green-light call you can trust."},
+        {tag: "LOADS", title: "Manifest & W&B", body: "Every load weighed against the envelope as jumpers shuffle — no clipboard arithmetic."},
+        {tag: "GLIDE", title: "Engine-out glide", body: "A continuously updated, wind-corrected glide ring from your current altitude. Always an out."},
+        {tag: "WX", title: "Winds aloft & pattern", body: "Forecast winds by altitude, pattern planning, and density altitude where it matters."},
+        {tag: "LOG", title: "Pilot logbook", body: "Loads, cycles, and hours logged automatically as you fly. Export whenever you need it."}
+      ],
+      faqs: [
+        {q: "Is this a replacement for ForeFlight?", a: "No — it's the app for the jump operation itself. Many pilots run both: a GA EFB for the cross-country legs, jumpEFB for the load cycle. What GA EFBs treat as an edge case is our whole product. And unlike the big GA EFBs, we ship on Android too."},
+        {q: "Does it work without cell coverage?", a: "Yes. Winds and forecasts are fetched when you have signal and cached; spot, jump run, W&B, glide, and logbook are fully on-device."},
+        {q: "What aircraft does it support?", a: "Any jump ship. W&B profiles ship for the common fleet — 182, 206, Caravan, Kodiak, PAC 750, Twin Otter, King Air — and you can build custom profiles."},
+        {q: "Is the green-light call authoritative?", a: "It's advisory. You're the PIC — jumpEFB gives you the numbers to make the call, and the audit trail to defend it."}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
