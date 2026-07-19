@@ -2,3 +2,6 @@
 node_modules/
 dist/
 .env
+
+# Design handoff bundle — kept local, not deployed
+design_handoff_jumpefb_website_v2/

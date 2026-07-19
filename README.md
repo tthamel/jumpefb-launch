@@ -1,6 +1,6 @@
 # jumpEFB Launch Page
 
-One-page marketing site for **jumpEFB** — the standalone pilot EFB from DirtDive. Built from `design_handoff_jumpefb_website_v2/` (tokens, copy deck, and reference markup live there).
+One-page marketing site for **jumpEFB** — the standalone pilot EFB from DirtDive. Built from the `design_handoff_jumpefb_website_v2/` bundle (tokens, copy deck, reference markup — kept local/untracked to keep deployments clean).
 
 Plain static HTML/CSS, no build step, no backend. IBM Plex Sans/Mono via Google Fonts.
 
