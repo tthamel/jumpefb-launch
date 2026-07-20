@@ -1,6 +1,6 @@
 # jumpEFB Launch Page
 
-One-page marketing site for **jumpEFB** — the standalone pilot EFB from DirtDive. Built from the `design_handoff_jumpefb_website_v2/` bundle (tokens, copy deck, reference markup — kept local/untracked to keep deployments clean).
+One-page marketing site for **jumpEFB** — the standalone EFB for jump pilots. Built from the `design_handoff_jumpefb_website_v2/` bundle (tokens, copy deck, reference markup — kept local/untracked to keep deployments clean).
 
 Plain static HTML/CSS, no build step, no backend. IBM Plex Sans/Mono via Google Fonts.
 
@@ -14,8 +14,9 @@ python3 -m http.server 8000
 ## TBD (owner: Trevor)
 
 - "Get the app" / "Join the beta" → TestFlight + Play internal-track URLs (currently `#get`)
-- "Talk to us" → `mailto:hello@dirtdive.app` (address unconfirmed)
-- `privacy.html` / `support.html` → host the two pages from the launch package (linked in footer, not yet present)
+- `hello@jumpefb.com` → set up Cloudflare Email Routing so this address actually receives mail
+- Terms: fill in governing-law state (and entity name if one is formed later)
+- Privacy: verify every claim against actual app behavior before App Store submission
 
 ## Design knobs
 
