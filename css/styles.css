@@ -98,7 +98,8 @@ h2 {
   justify-content: space-between;
 }
 
-.nav-brand { display: flex; align-items: center; gap: 11px; }
+.nav-brand { display: flex; align-items: center; gap: 11px; color: var(--text); }
+.nav-brand:hover { color: var(--text); }
 
 .logo-tile {
   width: 44px;
@@ -487,6 +488,54 @@ h2 {
 .footer-links { display: flex; gap: 22px; }
 .footer-links a { font: 500 12px var(--sans); color: var(--muted); }
 .footer-links a:hover { color: var(--text); }
+
+/* Legal / support pages */
+
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 32px 96px;
+}
+
+.legal-h1 {
+  font: 700 36px/1.15 var(--sans);
+  letter-spacing: -.025em;
+  margin: 0;
+}
+
+.legal-meta {
+  font: 500 12px var(--mono);
+  color: var(--faint);
+  letter-spacing: .06em;
+  margin: 14px 0 0;
+}
+
+.legal-h2 {
+  font: 600 19px var(--sans);
+  letter-spacing: -.015em;
+  margin: 40px 0 0;
+}
+
+.legal p {
+  font: 400 15px/1.7 var(--sans);
+  color: var(--dim);
+  margin: 12px 0 0;
+}
+
+.legal ul {
+  margin: 12px 0 0;
+  padding-left: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legal li {
+  font: 400 15px/1.6 var(--sans);
+  color: var(--dim);
+}
+
+.legal strong { color: var(--text); }
 
 /* Responsive (desktop-first reference; collapse gracefully below 960px) */
 
